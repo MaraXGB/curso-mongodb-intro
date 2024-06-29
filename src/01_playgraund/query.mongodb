@@ -1,0 +1,8 @@
+//Ejecutara la ultima query
+//conectar a una base de datos
+use("sample_training")
+//query find
+db.zips.find({ state: "NY" })
+//query cuantos con el find
+db.zips.find({ state: "NY" }).count()
+//
