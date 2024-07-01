@@ -1,0 +1,8 @@
+//Ejecutara la ultima query
+//conectar a una base de datos
+use("platzi_store")
+//query find
+db.products.find({ price: 1200 })
+//query cuantos con el find
+db.products.find({ price: 1200 }).count()
+//

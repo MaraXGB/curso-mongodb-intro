@@ -111,6 +111,23 @@ NOTA: documentation for mongo configuration https://hub.docker.com/_/mongo
 4. Create a folder in the project, for example mongo_data, that is the same folder in the configuration volumes.
 5. In .gitignore add this folder "mongo_data".
 6. To up the docker container go to terminal an execute the comand in the src/02_docker/docker.md file.
+7. Go to mongo compass and create a new connection
+8. Change the name and the color to indentify
+9. Enter in advance connection options 
+10. Select General MongoDB por ser local
+11. Authentication use the username and the password in the docker-compose.yml file
+12. TLS/SSL off
+13. Save & conect
+14. Now you can start creating your own database
+
+## Docker on VSCode
+1. In the connection created con mongo compass copy the connection string.
+2. create a new connection in mongo db extension on vscode
+3. Change the connection name to identify
+4. Create a file inside the folder 02_docker with the name query.mongodb
+
+
+
 
 
 
