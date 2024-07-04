@@ -1,0 +1,40 @@
+use("platzi_store")
+//borro todos los documentos de una coleccion
+db.products.drop()
+
+db.products.insertMany([
+    {
+        _id: 2,
+        name: "Laptop MSI",
+        price: 2000
+      },
+      {
+        _id: 1,
+        name: "Xiaomi Poco M4",
+        price: 1000
+      },
+      {
+        _id: 4,
+        name: "Smartband Xiaomi B8",
+        price: 70,
+        tags: [
+          "tech",
+          "watch",
+          "xiaomi"
+        ]
+      },
+      {
+        _id: 3,
+        name: "Airbuds Xiaomi b8",
+        price: 3000
+      },
+      {
+        name: "Arduino Uno",
+        price: 30
+      }
+], {
+    //Para errores de duplicidad: no importara si hay errores insertara todos los que no tengan error
+    ordered: false 
+})
+
+db.products.find()

@@ -1,0 +1,14 @@
+use("platzi_store")
+
+db.products.updateOne(
+    //query
+    {_id:4},
+    // change => operators
+    {
+        $set: {
+        name: 'Smartband Xiaomi B8',
+        price: 50,
+        tags: ['tech','watch','xiaomi']
+        }
+    }
+)

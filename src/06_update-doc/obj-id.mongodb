@@ -1,0 +1,14 @@
+use("platzi_store")
+
+db.products.updateOne(
+    //query
+    {_id: ObjectId("6686b0022ed39fb3fc5cae19")},
+    // change => operators
+    {
+        $set: {
+        name: 'Arduino Mega',
+        price: 50,
+        tags: ['tech','micro','arduino']
+        }
+    }
+)
