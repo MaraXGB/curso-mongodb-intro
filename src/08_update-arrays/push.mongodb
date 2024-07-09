@@ -1,0 +1,10 @@
+use("platzi_store")
+
+db.inventory.updateOne({_id:4},
+ {
+    //Atributo que solo funciona para arrays agregar un nuevo dato
+    $push: {
+        tags: "headphone"
+    }
+ }
+)

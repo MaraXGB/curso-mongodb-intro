@@ -1,0 +1,22 @@
+use("platzi_store")
+
+// db.inventory.updateMany({},
+//  {
+//     //Atributo que solo funciona para arrays remueve un dato existente en el array
+//     $pull: {
+//         tags: "book"
+//     }
+//  }
+// )
+
+db.inventory.updateMany({},
+    {
+       //Atributo que solo funciona para arrays remueve un dato existente en el array
+       $pull: {
+           tags: {
+              // operador in -> selecciona varios elementos del array 
+              $in: ["appliance", "school"]
+           }
+       }
+    }
+   )
