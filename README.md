@@ -126,6 +126,20 @@ NOTA: documentation for mongo configuration https://hub.docker.com/_/mongo
 3. Change the connection name to identify
 4. Create a file inside the folder 02_docker with the name query.mongodb
 
+## MondoDB Operators
+ 
+$inc: -> increment a numeric atribute
+      $inc: { number: 2 } -> number is the atribute & 2 is the quantity to increment.
+
+$eq: -> compares equal atributes value
+      $eq: { number: 2 } -> number is the atribute & 2 is the number to compare
+
+$ne: -> compares no equal atributes value
+      $ne: { number: 2 } -> number is the atribute & 2 is the number of the exception.
+      
+
+
+
 
 
 

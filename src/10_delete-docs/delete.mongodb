@@ -1,0 +1,9 @@
+use("platzi_store")
+//eliminar documento con un id autogenerado (mongo)
+// db.products.deleteOne({ _id: ObjectId('1234232dd') })
+// elimina un documento con un id especifico
+// db.products.deleteOne({ _id: 1})
+//elimina todos los documentos cuyo atributo price sea igual a 100
+// db.products.deleteMany({ price: 100 })
+//elimina todas los documentos de la colleccion
+db.products.drop()

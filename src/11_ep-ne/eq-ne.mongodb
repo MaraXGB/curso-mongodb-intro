@@ -1,0 +1,17 @@
+use("platzi_store")
+
+// Usando eq -> equal
+// db.inventory.find({ qty:{ $eq: 20 } })
+//buscar en subdocumentos
+// db.inventory.find({ "item.name":{ $eq: "ab" } })
+
+// Usando ne -> no equal
+// db.inventory.find({ qty:{ $ne: 20 } })
+
+db.inventory.updateMany({ qty:{ $ne: 20 } },
+    {
+        $inc: {
+            qty: 10
+        }
+    }
+)
