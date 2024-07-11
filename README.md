@@ -136,6 +136,18 @@ $eq: -> compares equal atributes value
 
 $ne: -> compares no equal atributes value
       $ne: { number: 2 } -> number is the atribute & 2 is the number of the exception.
+
+$gt: -> grater than a numeric value
+     number: { $gt: 2 } -> number is the atribute & grater than 2, it doesn´t include the 2.
+
+$gte: -> grater than equal a numeric value
+     number: { $gte: 2 } -> number is the atribute & grater than equals 2, it does include the 2.
+
+$lt: -> less than a numeric value
+     number: { $lt: 2 } -> number is the atribute & less than 2, it doesn´t include the 2.
+
+$lte: -> less than equal a numeric value
+     number: { $lte: 2 } -> number is the atribute & less than equals 2, it does include the 2.
       
 
 
