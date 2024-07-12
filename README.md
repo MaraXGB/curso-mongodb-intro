@@ -148,6 +148,22 @@ $lt: -> less than a numeric value
 
 $lte: -> less than equal a numeric value
      number: { $lte: 2 } -> number is the atribute & less than equals 2, it does include the 2.
+$regex: 
+      //Regex return all match with the string inside / /
+      db.inventory.find({ "item.description": { $regex: /line/ }})
+
+      i -> put it after /, includes the words no matter the capitals
+      db.inventory.find({ "item.description": { $regex: /LINE/i }})
+
+      $ -> put $  at the end of the string before /, gets all match at the end
+      db.inventory.find({ "item.description": { $regex: /line$/ }})
+
+      ^ -> put ^  at the start of the string after /, gets all match at the start
+      db.inventory.find({ "item.description": { $regex: /^Single/i }})
+
+      m -> put m after the last /, get match multiline (jump line \n)  
+      db.inventory.find({ "item.description": { $regex: /^s/im }})
+
       
 
 

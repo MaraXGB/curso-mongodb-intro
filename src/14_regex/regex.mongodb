@@ -1,0 +1,17 @@
+use("platzi_store")
+
+//Regex return all match with the string inside / /
+// db.inventory.find({ "item.description": { $regex: /line/ }})
+
+// i -> put it after /, includes the words no matter the capitals
+// db.inventory.find({ "item.description": { $regex: /LINE/i }})
+
+// $ -> put $  at the end of the string before /, gets all match at the end
+// db.inventory.find({ "item.description": { $regex: /line$/ }})
+
+// ^ -> put ^  at the start of the string after /, gets all match at the start
+// db.inventory.find({ "item.description": { $regex: /^Single/i }})
+
+// m -> put m after the last /, get match multiline (jump line \n)  
+db.inventory.find({ "item.description": { $regex: /^s/im }})
+
