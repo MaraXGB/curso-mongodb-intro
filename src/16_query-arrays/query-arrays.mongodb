@@ -1,0 +1,32 @@
+use("platzi_store")
+
+// $in, values & arrays
+// db.inventory.find(
+// {
+//     qty: {$in: [20,25]}
+// }
+// )
+// db.inventory.find(
+//     {
+//         tags: {$in: ["book","electronics"]}
+//     }
+//     )
+
+    // $nin, there´s not in values & arrays
+    db.inventory.find(
+        {
+            tags: {$nin: ["book","electronics"]}
+        }
+        )
+
+//arrays
+db.inventory.find({
+    // tags: "book"
+    // tags: ["book", "school"]
+    // tags: {$all: ["book","school"]} //return all with the coincidence
+    tags: {$size: 2} //return the array tag with two elements
+})
+//elemMatch
+db.survey.find({
+    results: { $elemMatch: { product: "xyz", score: {$gte: 7}}}
+})
